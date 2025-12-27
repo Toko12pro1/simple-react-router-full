@@ -1,0 +1,12 @@
+.active-job.card{display:flex;flex-direction:column;padding:18px;border-radius:12px;border:1px solid #eef2f7;box-shadow:0 10px 30px rgba(15,23,42,0.04);margin:10px 0}
+.job-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.job-title{margin:0;font-size:1.1rem;color:#0f172a}
+.job-fare{text-align:right}
+.fare-amount{font-weight:900;color:#0f172a;font-size:1rem}
+.job-actions-container{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pickup-countdown{color:#ef4444;font-weight:800}
+@media (max-width:640px){
+  .job-header{flex-direction:column;gap:8px}
+  .job-fare{text-align:left}
+  .job-actions-container{width:100%;display:flex;gap:8px}
+}

@@ -1,0 +1,709 @@
+/* HOMEPAGE MAIN CONTAINER */
+.customer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3fdf5, #ffe6fa);
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.customer.customer-ride-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* TOP HEADER AREA */
+.customer-header {
+  padding: 20px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-left {
+  flex: 1;
+}
+
+.greeting {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.zone-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.zone-label {
+  font-size: 1.2rem;
+}
+
+.zone-dropdown {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: white;
+  cursor: pointer;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.zone-dropdown:focus {
+  outline: none;
+  border-color: #2c7be5;
+  box-shadow: 0 0 0 3px rgba(44, 123, 229, 0.1);
+}
+
+.profile-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #ddd;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+  position: relative;
+  z-index: 100;
+}
+
+.profile-icon:hover {
+  background: #f0f0f0;
+  border-color: #2c7be5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* PROFILE POPUP */
+.profile-popup {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  min-width: 280px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-content {
+  padding: 20px;
+}
+
+.profile-content h3 {
+  font-size: 1.2rem;
+  margin: 0 0 12px;
+  color: #2c3e50;
+}
+
+.profile-status,
+.profile-discount {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 8px;
+}
+
+.profile-status strong,
+.profile-discount strong {
+  color: #2c7be5;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.profile-actions button {
+  flex: 1;
+  padding: 8px 12px !important;
+  font-size: 0.85rem;
+}
+
+/* CENTRAL ACTION SECTION */
+.action-section {
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.primary-action,
+.secondary-action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px !important;
+  border-radius: 16px !important;
+  border: none !important;
+  width: 100% !important;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.primary-action {
+  background: linear-gradient(135deg, #2c7be5 0%, #00d084 100%);
+  color: white;
+  box-shadow: 0 8px 24px rgba(44, 123, 229, 0.3);
+}
+
+.primary-action:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(44, 123, 229, 0.4);
+}
+
+.secondary-action {
+  background: white;
+  color: #2c3e50;
+  border: 2px solid #e0e0e0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.secondary-action:hover {
+  transform: translateY(-2px);
+  border-color: #2c7be5 !important;
+  box-shadow: 0 6px 20px rgba(44, 123, 229, 0.2);
+}
+
+.action-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.action-text {
+  flex: 1;
+}
+
+.action-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.action-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* SERVICE CARDS */
+.service-cards {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px !important;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px !important;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+  width: 100% !important;
+}
+
+.service-card:active {
+  transform: scale(0.98);
+  background: #f9f9f9;
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-color: #2c7be5;
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* MINI MAP */
+.mini-map-section {
+  padding: 12px 16px;
+}
+
+.mini-map {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-location-marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.map-moto-icon {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 25%;
+  right: 15%;
+  animation: drift 3s ease-in-out infinite;
+}
+
+.map-moto-2 {
+  right: 20%;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.mini-map-info {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* WALLET & OFFERS STRIP */
+.wallet-strip {
+  padding: 12px 16px;
+  background: white;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.wallet-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-label {
+  font-size: 0.8rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.wallet-amount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c7be5;
+  margin-top: 2px;
+}
+
+.wallet-action {
+  padding: 8px 16px !important;
+  background: linear-gradient(90deg, #2c7be5, #00d084) !important;
+  color: white !important;
+  font-size: 0.9rem;
+  border-radius: 20px !important;
+  font-weight: 600;
+}
+
+/* DISCOUNT STRIP */
+.discount-strip {
+  padding: 12px 16px;
+  background: linear-gradient(90deg, rgba(255, 193, 7, 0.1), rgba(255, 193, 7, 0.05));
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 10px;
+  margin: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.discount-badge {
+  font-size: 1.2rem;
+}
+
+/* PROMOTIONS BANNER */
+.promotions-banner {
+  padding: 16px;
+  margin: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.25);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.promotions-banner:active {
+  transform: scale(0.98);
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.banner-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.banner-text {
+  flex: 1;
+}
+
+.banner-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.banner-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.95;
+}
+
+/* RIDE REQUEST FORM */
+.ride-request-form {
+  padding: 16px;
+  display: block;
+  animation: slideUp 0.4s ease;
+}
+
+.ride-request-form.ride-form-hidden {
+  display: none;
+}
+
+.form-overlay {
+  display: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  padding: 0 !important;
+  background: #f5f5f5 !important;
+  border-radius: 50% !important;
+  border: none !important;
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background: #eee !important;
+  color: #333;
+}
+
+/* RIDE CARDS */
+
+.ride-card {
+  background: #ffffff;
+  max-width: 450px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  animation: slideUp 0.5s ease;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ride-card h2 {
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.ride-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.estimate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button.primary {
+  background: linear-gradient(90deg, #2c7be5, #6f42c1);
+  color: #fff;
+}
+
+button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+button.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #f0f0f0;
+  color: #333;
+  font-weight: 600;
+}
+
+button.secondary:hover {
+  background: #e0e0e0;
+}
+
+.loading {
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #eee;
+  border-top: 4px solid #2c7be5;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.success {
+  border-left: 6px solid #28a745;
+}
+
+.info {
+  border-left: 6px solid #17a2b8;
+}
+
+.warning {
+  border-left: 6px solid #ffc107;
+}
+
+.completed {
+  border-left: 6px solid #6f42c1;
+  text-align: center;
+}
+
+.ride-type-toggle {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ride-type-toggle button {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #f8f9fa;
+  cursor: pointer;
+  font-weight: 600;
+  flex: 1;
+  width: auto;
+}
+
+.ride-type-toggle button.active {
+  background: linear-gradient(90deg, #20c997, #0ca678);
+  color: white;
+  border: none;
+}
+
+.cheap-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+  .customer {
+    padding: 0;
+  }
+
+  .customer-header {
+    padding: 12px 12px 8px;
+  }
+
+  .greeting {
+    font-size: 1.1rem;
+  }
+
+  .action-section,
+  .service-cards {
+    padding: 8px 12px;
+  }
+
+  .primary-action,
+  .secondary-action,
+  .service-card {
+    padding: 14px !important;
+  }
+
+  .action-icon {
+    font-size: 1.5rem;
+  }
+
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .mini-map {
+    height: 120px;
+  }
+}
+
+/* SUNLIGHT CONTRAST */
+@media (prefers-color-scheme: light) {
+  .customer {
+    background: linear-gradient(135deg, #e3fdf5, #ffe6fa);
+  }
+
+  .greeting {
+    color: #1a2332;
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .primary-action {
+    box-shadow: 0 10px 30px rgba(44, 123, 229, 0.35);
+  }
+
+  .service-card,
+  .wallet-strip {
+    background: #ffffff;
+    border-color: #d0d0d0;
+  }
+}
+
+/* MapModal styles */
+.map-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.map-modal {
+  width: min(720px, 95%);
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+  position: relative;
+}
+
+.map-modal .close-btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #f5f5f5;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.map-modal h3 { margin: 0 0 8px; }
+.map-modal .map-location { color: #555; margin-bottom: 12px; }
+.map-modal .map-embed { border-radius: 8px; overflow: hidden; margin-bottom: 12px; }
+.map-modal .map-actions { display:flex; gap:8px; justify-content:flex-end; }
+.map-modal .map-actions .primary { background: linear-gradient(90deg,#2c7be5,#00d084); color:white; padding:8px 12px; border-radius:8px; text-decoration:none; }
+.map-modal .map-actions .secondary { background:#f0f0f0; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+
+.map-preview { margin-top: 8px; display:block; width:100%; padding:10px; border-radius:10px; background:#f8fafc; border:1px solid #e6edf3; text-align:left; }
+
+/* Ride map preview inside ride request form */
+.ride-map { margin-top: 12px; border-radius: 10px; overflow: hidden; background: #f8fafc; border: 1px solid #e6edf3; }
+.ride-map-placeholder { padding: 18px; color: #666; text-align: center; }
+

@@ -1,0 +1,13 @@
+.driver-header.card{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:12px}
+.header-info-container{display:flex;align-items:center;gap:12px}
+.avatar{width:56px;height:56px;border-radius:999px;background:#eef2ff;display:flex;align-items:center;justify-content:center;font-weight:800;color:#2c7be5}
+.driver-name{margin:0;font-size:1.1rem}
+.button-container{display:flex;align-items:center;gap:8px}
+.zone-pill{background:#eef2ff;padding:8px 12px;border-radius:999px;border:1px solid #e6f0ff;color:#1f4db3}
+.online-toggle{display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:18px;border:none;cursor:pointer}
+.online-toggle .dot{width:12px;height:12px;border-radius:50%;background:#cbd5e1;display:inline-block}
+.online-toggle.online .dot{background:linear-gradient(90deg,#2563eb,#00d084)}
+.online-toggle .label{font-weight:800}
+@media (max-width:640px){
+  .driver-header.card{flex-direction:column;align-items:flex-start;gap:12px}
+}
